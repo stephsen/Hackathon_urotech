@@ -1,0 +1,24 @@
+{
+  "name": "ajagks",
+  "version": "0.0.1",
+  "description": "ajagks",
+  "authors": [
+    "Jean-Baptiste Pasquier"
+  ],
+  "license": "ISC",
+  "main": "",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.8",
+    "jquery": "^3.1.1",
+    "ngstorage": "^0.3.11"
+  }
+}
