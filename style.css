@@ -1,0 +1,36 @@
+/*Barre de navigation*/
+
+#logo{
+  height: 50px;
+  width: 50px;
+}
+/*Accueil*/
+
+h1{
+  color: #1a237e;
+  font-family: 'Roboto';
+  font-size: 30px;
+  text-align: center;
+}
+
+h2{
+  color: #1a237e;
+  font-family: 'Roboto';
+  font-size: 25px;
+  text-align: center;
+
+}
+
+p{
+  font-family: 'Roboto';
+  padding: 0% 10% 0 10%;
+  text-align: justify;
+}
+
+.boutonaccueil{
+  align-items: center;
+}
+
+#boutonaccueilleft{
+
+}
