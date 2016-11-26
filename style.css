@@ -51,12 +51,16 @@ p {
     color: white;
     margin-top: 40px;
 }
+.nav-wrapper{
+font-family: 'Roboto Slab', serif;
+}
 .choix{
   text-align: center;
 }
 .choix a{
   width: 50%;
   height: 50%;
+  font-weight: bold;
 }
 #ordonnance h1 {
     text-align: center;
