@@ -161,7 +161,10 @@
             ['26/11/2016',  3]
           ]);
           var optionstress = {
-            title: 'Mon stress'
+            vAxis: {scaleType: 'date'},
+            hAxis: {scaleType: 'number'},
+            title: 'Mon stress',
+            scaleType: 'number'
           };
           var chartstress = new google.visualization.LineChart(document.getElementById('chart_divstress'));
 

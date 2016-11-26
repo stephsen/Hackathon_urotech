@@ -38,3 +38,15 @@ main {
   width: 900px;
   height: 500px;
 }
+
+.pres {
+height: 250px;
+}
+
+.titrepres {
+  padding-top: 55px;
+}
+
+#test1, #test2 {
+  padding-left: 100px !important;
+}
