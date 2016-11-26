@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+    <head>
+        <meta charset="utf-8">
+        <title>serein'envie</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+        <link rel="stylesheet" href="../style.css">
+    </head>
+    <body ng-controller='suiviPatientController as vm'>
+        <div class="navbar-fixed">
+            <nav>
+                <div class="nav-wrapper indigo darken-3">
+                    <a href="#"><img class="brand-logo left" width="55" src="../img/logo.png"></a>
+                    <a href="#" data-activates="mobile-demo" class="button-collapse right">
+                        <i class="material-icons">menu</i>
+                    </a>
+                    <ul class="right hide-on-med-and-down">
+                        <li>
+                            <a href="accueilPatient.html">Accueil</a>
+                        </li>
+                        <li>
+                            <a href="diagnosticPatient.html">Diagnostic</a>
+                        </li>
+                        <li>
+                            <a href="traitementPatient.html">Traitement</a>
+                        </li>
+                        <li>
+                            <a href="suiviPatient.html">Suivi</a>
+                        </li>
+                        <li>
+                            <a href="profil.html">Profil</a>
+                        </li>
+                        <li>
+                            <a href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+                    <ul class="side-nav" id="mobile-demo">
+                        <li>
+                            <a href="accueilPatient.html">Accueil</a>
+                        </li>
+                        <li>
+                            <a href="diagnosticPatient.html">Diagnostic</a>
+                        </li>
+                        <li>
+                            <a href="traitementPatient.html">Traitement</a>
+                        </li>
+                        <li>
+                            <a href="suiviPatient.html">Suivi</a>
+                        </li>
+                        <li>
+                            <a href="profil.html">Profil</a>
+                        </li>
+                        <li>
+                            <a href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+        <main>
+            <div class="row">
+                <div id="suiviBar" class="col s12 indigo darken-1">
+                    <div class="offset-l1 col s3">
+                        <a ng-click="vm.showQuotidien()" class="waves-light btn indigo darken-1">Mon quotidien</a>
+                    </div>
+                    <div class="col s3 l2">
+                        <a ng-click="vm.showRessenti()" class="waves-light btn indigo darken-1">Mon ressenti</a>
+                    </div>
+                    <div class="col s3 l2">
+                        <a ng-click="vm.showStress()" class="waves-light btn indigo darken-1">Mon stress</a>
+                    </div>
+                    <div class="col s3 l2">
+                        <a ng-click="vm.showEvolution()" class="waves-light btn indigo darken-1">Mon évolution</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Page Mon quotidien -->
+            <div class="quotidien" ng-show="vm.quotidien">
+
+                <div class="row">
+                    <div class="input-field col offset-s4 s4">
+                      <p>Choisissez le jour que vous voulez renseigner</p>
+                        <input type="date" placeholder="Choisissez un jour" class="datepicker">
+                        <br/>
+                        <p>Quand as-tu été géné ?</p>
+                        <select id="moment">
+                            <option value="" disabled selected>Choisir l'heure</option>
+                            <option value="0">00h</option>
+                            <option value="1">01h</option>
+                            <option value="2">02h</option>
+                            <option value="3">03h</option>
+                            <option value="4">04h</option>
+                            <option value="5">05h</option>
+                            <option value="6">06h</option>
+                            <option value="7">07h</option>
+                            <option value="8">08h</option>
+                            <option value="9">09h</option>
+                            <option value="10">10h</option>
+                            <option value="11">11h</option>
+                            <option value="12">12h</option>
+                            <option value="13">13h</option>
+                            <option value="14">14h</option>
+                            <option value="15">15h</option>
+                            <option value="16">16h</option>
+                            <option value="17">17h</option>
+                            <option value="18">18h</option>
+                            <option value="19">19h</option>
+                            <option value="20">20h</option>
+                            <option value="21">21h</option>
+                            <option value="22">22h</option>
+                            <option value="23">23h</option>
+                            <option value="24">24h</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col offset-s4 s4">
+                        <p>Quelle activité faisais tu ?</p>
+                        <select id="activite">
+                            <option value="" disabled selected>Choisir une activité</option>
+                            <option value="sommeil">Sommeil</option>
+                            <option value="voiture">Voiture</option>
+                            <option value="travail">Travail</option>
+                            <option value="repas">Repas</option>
+                            <option value="sortie">Sortie</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col offset-s4">
+                        <a ng-click="vm.addIncident()" class="waves-light btn indigo darken-3">Ajouter un incident</a>
+                    </div>
+                </div>
+                <div class="row">
+                    <br><br>
+                    <h4>Les différents incidents de la journée :</h4>
+                    <div ng-repeat="donnee in vm.donnees" id="incidents">
+                        <p>Heure :
+                            {{donnee[0]}}
+                            h - Activités :
+                            {{donnee[1]}}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="ressenti" ng-show="vm.ressenti">
+                <h3>Mon ressenti</h3>
+                <div class="row">
+                    <div class="input-field col offset-s5 s2">
+                        <p>Quel est ton ressenti ?</p>
+                        <select id="ressenti">
+                            <option value="" disabled selected>Aujourd'hui, je me sens</option>
+                            <option value="1" class="left" data-icon="../img/1.png" alt="très bien" />Très bien</option>
+                            <option value="2" class="left" data-icon="../img/2.png" alt="bien" />Bien</option>
+                            <option value="3" class="left" data-icon="../img/3.png" alt="plutôt bien" />Plutôt bien</option>
+                            <option value="4" class="left" data-icon="../img/4.png" alt="mal" />Mal</option>
+                            <option value="5" class="left" data-icon="../img/5.png" alt="très mal" />Très mal</option>
+                        </select>
+
+                    </div>
+                    <div class="stress" ng-show="vm.stress">
+                        Évaluation de mon stress
+                    </div>
+                    <div class="evolution" ng-show="vm.evolution">
+                        Mon évolution
+                    </div>
+                    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+                    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+                    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+                    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+                    <script type="text/javascript">
+                        angular.module('myApp', []).controller('suiviPatientController', function() {
+                            this.quotidien = true;
+                            this.ressenti = false;
+                            this.stress = false;
+                            this.evolution = false;
+
+                            this.showQuotidien = () => {
+                                this.quotidien = !this.quotidien;
+                                this.ressenti = false;
+                                this.stress = false;
+                                this.evolution = false;
+                            };
+                            this.showRessenti = () => {
+                                this.quotidien = false;
+                                this.ressenti = !this.ressenti;
+                                this.stress = false;
+                                this.evolution = false;
+                            };
+                            this.showStress = () => {
+                                this.quotidien = false;
+                                this.ressenti = false;
+                                this.stress = !this.stress;
+                                this.evolution = false;
+                            };
+                            this.showEvolution = () => {
+                                this.quotidien = false;
+                                this.ressenti = false;
+                                this.stress = false;
+                                this.evolution = !this.evolution;
+                            };
+                            $('.datepicker').pickadate({
+                                selectMonths: true, // Creates a dropdown to control month
+                                selectYears: 1 // Creates a dropdown of 15 years to control year
+                            });
+                            $(document).ready(function() {
+                                $('select').material_select();
+                            });
+
+                            this.donnees = []
+                            this.addIncident = () => {
+                                var selectdonnees = document.getElementById("moment");
+                                var valeurdonnees = selectdonnees.options[selectdonnees.selectedIndex].value;
+                                var selectactivites = document.getElementById("activite");
+                                var valeuractivites = selectactivites.options[selectactivites.selectedIndex].value;
+                                this.donnees.push([valeurdonnees, valeuractivites])
+
+                            }
+                        })
+                    </script>
+                </main>
+            </body>
+        </html>

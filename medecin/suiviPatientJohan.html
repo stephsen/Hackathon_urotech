@@ -1,150 +1,244 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="app">
-<head>
-  <meta charset="UTF-8">
-  <title>serein'envie</title>
-<head>
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
-  <link rel="stylesheet" href="../style.css" media="screen" title="no title">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <title>serein'envie</title>
+        <head>
+            <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+            <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
+            <link rel="stylesheet" href="../style.css" media="screen" title="no title">
+        </head>
 
-<body ng-controller="SuiviMedecinController as vm">
-  <div class="navbar-fixed">
-    <nav>
-      <div class="nav-wrapper indigo darken-3">
-        <a href="#"><img class="brand-logo left" width="55" src="../img/logo.png"></a>
-        <a href="#" data-activates="mobile-demo" class="button-collapse right"><i class="material-icons">menu</i></a>
-        <ul class="right hide-on-med-and-down">
-          <li><a href="accueilMedecins.html">Accueil</a></li>
-          <li><a href="diagnosticMedecins.html">Diagnostic</a></li>
-          <li><a href="traitementMedecins.html">Traitement</a></li>
-          <li><a href="suiviMedecins.html">Suivi</a></li>
-        </ul>
-        <ul class="side-nav" id="mobile-demo">
-          <li><a href="accueilMedecins.html">Accueil</a></li>
-          <li><a href="diagnosticMedecins.html">Diagnostic</a></li>
-          <li><a href="traitementMedecins.html">Traitement</a></li>
-          <li><a href="suiviMedecins.html">Suivi</a></li>
-        </ul>
-      </div>
-    </nav>
-  </div>
-  <main class="center-align">
-  <div class="section offset-s2 col s4"></div>
-    <div class='row'>
-        <div class="input-field col s4 offset-s2">
-          <select class="center-align" id='patientMedecin'>
-            <option value="johan">Johan Hélias</option>
-            <option value="johan">Johan Hélias</option>
-            <option value="camille">Camille Antoine Fontaine</option>
-            <option value="sylvain">Sylvain Labarre</option>
-          </select>
-          <!-- <label>Selectionner votre patient</label> -->
-        </div>
-        <br>
-        <a class="waves-effect waves-light btn col s3" ng-click="vm.showSuiviMedecin()">valider</a>
-    </div>
-    <!-- suivi patient -->
-    <div class="row">
-      <div class="offset-s1 col s10 offset-s1">
-        <div id="chart_div" style="width: 900px; height: 500px;"></div>
-        <br>
-        <div id="chart_divressentie" style="width: 900px; height: 500px;"></div>
-        <br>
-        <div id="chart_divstress" style="width: 900px; height: 500px;"></div>
-    </div>
-    </div>
-      <!-- fin suivi patient -->
-    <div class="section"></div>
-  </main>
-  <footer class="page-footer indigo darken-3">
-      <div class="footer-copyright">
-          <div class="container">
-              © 2014 Copyright Text
-              <a class="grey-text text-lighten-4 right" href="#!">Mentions Légals</a>
-          </div>
-      </div>
-  </footer>
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.1/jquery.min.js"></script>
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
-  <script type="text/javascript" src="https://www.google.com/jsapi"></script>
-  <script>
-    $(document).ready(function() {
-      $('select').material_select();
-    });
+        <body ng-controller="SuiviMedecinController as vm">
+            <div class="navbar-fixed">
+                <nav>
+                    <div class="nav-wrapper indigo darken-3">
+                        <a href="#"><img class="brand-logo left" width="55" src="../img/logo.png"></a>
+                        <a href="#" data-activates="mobile-demo" class="button-collapse right">
+                            <i class="material-icons">menu</i>
+                        </a>
+                        <ul class="right hide-on-med-and-down">
+                            <li>
+                                <a href="accueilPatient.html">Accueil</a>
+                            </li>
+                            <li>
+                                <a href="diagnosticPatient.html">Diagnostic</a>
+                            </li>
+                            <li>
+                                <a href="traitementPatient.html">Traitement</a>
+                            </li>
+                            <li>
+                                <a href="suiviPatient.html">Suivi</a>
+                            </li>
+                            <li>
+                                <a href="profil.html">Profil</a>
+                            </li>
+                            <li>
+                                <a href="contact.html">Contact</a>
+                            </li>
+                        </ul>
+                        <ul class="side-nav" id="mobile-demo">
+                            <li>
+                                <a href="accueilPatient.html">Accueil</a>
+                            </li>
+                            <li>
+                                <a href="diagnosticPatient.html">Diagnostic</a>
+                            </li>
+                            <li>
+                                <a href="traitementPatient.html">Traitement</a>
+                            </li>
+                            <li>
+                                <a href="suiviPatient.html">Suivi</a>
+                            </li>
+                            <li>
+                                <a href="profil.html">Profil</a>
+                            </li>
+                            <li>
+                                <a href="contact.html">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+            <main class="center-align">
+                <div class="section offset-s2 col s4"></div>
+                <div class='row'>
+                    <div class="input-field col s4 offset-s2">
+                        <select class="center-align" id='patientMedecin'>
+                            <option value="johan">Johan Hélias</option>
+                            <option value="johan">Johan Hélias</option>
+                            <option value="camille">Camille Antoine Fontaine</option>
+                            <option value="sylvain">Sylvain Labarre</option>
+                        </select>
+                        <!-- <label>Selectionner votre patient</label> -->
+                    </div>
+                    <br>
+                    <a class="waves-effect waves-light btn col s3" ng-click="vm.showSuiviMedecin()">valider</a>
+                </div>
+                <!-- suivi patient -->
+                <div class="row">
+                    <div class="offset-s1 col s10 offset-s1">
+                        <div id="chart_div" style="width: 900px; height: 500px;"></div>
+                        <br>
+                        <div id="chart_divressentie" style="width: 900px; height: 500px;"></div>
+                        <br>
+                        <div id="chart_divstress" style="width: 900px; height: 500px;"></div>
+                    </div>
+                </div>
+                <!-- fin suivi patient -->
+                <div class="section"></div>
+            </main>
+            <footer class="page-footer indigo darken-3">
+                <div class="footer-copyright">
+                    <div class="container">
+                        © 2014 Copyright Text
+                        <a class="grey-text text-lighten-4 right" href="#!">Mentions Légals</a>
+                    </div>
+                </div>
+            </footer>
+            <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.1/jquery.min.js"></script>
+            <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
+            <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+            <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+            <script>
+                $(document).ready(function() {
+                    $('select').material_select();
+                });
 
-    google.load('visualization', '1', {packages:['corechart']});
-    google.setOnLoadCallback(drawChart);
+                google.load('visualization', '1', {packages: ['corechart']});
+                google.setOnLoadCallback(drawChart);
 
-    function drawChart() {
-      var data = google.visualization.arrayToDataTable([
-        ['Date', 'nbr'],
-        ['01/11/2016',  20],
-        ['03/11/2016',  22],
-        ['04/11/2016',  21],
-        ['06/11/2016',  20],
-        ['08/11/2016',  19],
-        ['10/11/2016',  18],
-        ['11/11/2016',  18],
-        ['12/11/2016',  18],
-        ['15/11/2016',  17],
-        ['16/11/2016',  20],
-        ['17/11/2016',  19],
-        ['19/11/2016',  17],
-        ['20/11/2016',  22],
-        ['22/11/2016',  17],
-        ['24/11/2016',  16],
-        ['26/11/2016',  17]
-      ]);
-      var options = {
-        title: 'Mon quotidien'
-      };
-      var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
+                function drawChart() {
+                    var data = google.visualization.arrayToDataTable([
+                        [
+                            'Date', 'nbr'
+                        ],
+                        [
+                            '01/11/2016', 20
+                        ],
+                        [
+                            '03/11/2016', 22
+                        ],
+                        [
+                            '04/11/2016', 21
+                        ],
+                        [
+                            '06/11/2016', 20
+                        ],
+                        [
+                            '08/11/2016', 19
+                        ],
+                        [
+                            '10/11/2016', 18
+                        ],
+                        [
+                            '11/11/2016', 18
+                        ],
+                        [
+                            '12/11/2016', 18
+                        ],
+                        [
+                            '15/11/2016', 17
+                        ],
+                        [
+                            '16/11/2016', 20
+                        ],
+                        [
+                            '17/11/2016', 19
+                        ],
+                        [
+                            '19/11/2016', 17
+                        ],
+                        [
+                            '20/11/2016', 22
+                        ],
+                        [
+                            '22/11/2016', 17
+                        ],
+                        [
+                            '24/11/2016', 16
+                        ],
+                        ['26/11/2016', 17]
+                    ]);
+                    var options = {
+                        title: 'Mon quotidien'
+                    };
+                    var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
 
-      chart.draw(data, options);
-    }
+                    chart.draw(data, options);
+                }
 
-    google.load('visualization', '1', {packages:['corechart']});
-    google.setOnLoadCallback(drawChartressentie);
+                google.load('visualization', '1', {packages: ['corechart']});
+                google.setOnLoadCallback(drawChartressentie);
 
-    function drawChartressentie() {
-      var dataressentie = google.visualization.arrayToDataTable([
-        ['Date', 'nbr'],
-        ['01/11/2016',  0],
-        ['03/11/2016',  0],
-        ['04/11/2016',  0],
-        ['06/11/2016',  0],
-        ['08/11/2016',  2],
-        ['10/11/2016',  1],
-        ['11/11/2016',  1],
-        ['12/11/2016',  1],
-        ['15/11/2016',  2],
-        ['16/11/2016',  0],
-        ['17/11/2016',  0],
-        ['19/11/2016',  2],
-        ['20/11/2016',  0],
-        ['22/11/2016',  1],
-        ['24/11/2016',  2],
-        ['26/11/2016',  2]
-      ]);
-      var optionsressentie = {
-        title: 'Mon ressentie'
-      };
-      var chartressentie = new google.visualization.LineChart(document.getElementById('chart_divressentie'));
+                function drawChartressentie() {
+                    var dataressentie = google.visualization.arrayToDataTable([
+                        [
+                            'Date', 'nbr'
+                        ],
+                        [
+                            '01/11/2016', 0
+                        ],
+                        [
+                            '03/11/2016', 0
+                        ],
+                        [
+                            '04/11/2016', 0
+                        ],
+                        [
+                            '06/11/2016', 0
+                        ],
+                        [
+                            '08/11/2016', 2
+                        ],
+                        [
+                            '10/11/2016', 1
+                        ],
+                        [
+                            '11/11/2016', 1
+                        ],
+                        [
+                            '12/11/2016', 1
+                        ],
+                        [
+                            '15/11/2016', 2
+                        ],
+                        [
+                            '16/11/2016', 0
+                        ],
+                        [
+                            '17/11/2016', 0
+                        ],
+                        [
+                            '19/11/2016', 2
+                        ],
+                        [
+                            '20/11/2016', 0
+                        ],
+                        [
+                            '22/11/2016', 1
+                        ],
+                        [
+                            '24/11/2016', 2
+                        ],
+                        ['26/11/2016', 2]
+                    ]);
+                    var optionsressentie = {
+                        title: 'Mon ressentie'
+                    };
+                    var chartressentie = new google.visualization.LineChart(document.getElementById('chart_divressentie'));
 
-      chartressentie.draw(dataressentie, optionsressentie);
-    }
+                    chartressentie.draw(dataressentie, optionsressentie);
+                }
 
-        google.load('visualization', '1', {packages:['corechart']});
-        google.setOnLoadCallback(drawChartstress);
+                google.load('visualization', '1', {packages: ['corechart']});
+                google.setOnLoadCallback(drawChartstress);
 
         function drawChartstress() {
           var datastress = google.visualization.arrayToDataTable([
             ['Date', 'nbr'],
             ['01/11/2016',  4],
-            ['03/11/2016',  5],
+            ['03/11/2016',  5], 
             ['04/11/2016',  4],
             ['06/11/2016',  4],
             ['08/11/2016',  3],
@@ -168,43 +262,43 @@
           };
           var chartstress = new google.visualization.LineChart(document.getElementById('chart_divstress'));
 
-          chartstress.draw(datastress, optionstress);
-        }
+                    chartstress.draw(datastress, optionstress);
+                }
 
-    angular.module('app',[]).controller('SuiviMedecinController', function(){
+                angular.module('app', []).controller('SuiviMedecinController', function() {
 
-      this.showSuiviMedecin = () => {
-          this.johan = false;
-          this.camille = false;
-          this.sylvain = false;
-          this.select = document.getElementById("patientMedecin");
-          this.valeur = this.select.options[this.select.selectedIndex].value;
-          if (this.valeur="johan") {
-            this.johan = !this.johan
-            drawChart()
-            drawChartressentie()
-            drawChartstress()
-            this.sylvain = false
-            this.camille = false
-          } else if (this.valeur="camille") {
-            this.camille = !this.camille
-            drawChart()
-            drawChartressentie()
-            drawChartstress()
-            this.sylvain = false
-            this.johan = false
-          } else {
-            this.sylvain = !this.sylvain
-            drawChart()
-            drawChartressentie()
-            drawChartstress()
-            this.camille = false
-            this.camille = false
-          }
-          console.log(this.johan);
-      };
-    })
-  </script>
-</body>
+                    this.showSuiviMedecin = () => {
+                        this.johan = false;
+                        this.camille = false;
+                        this.sylvain = false;
+                        this.select = document.getElementById("patientMedecin");
+                        this.valeur = this.select.options[this.select.selectedIndex].value;
+                        if (this.valeur = "johan") {
+                            this.johan = !this.johan
+                            drawChart()
+                            drawChartressentie()
+                            drawChartstress()
+                            this.sylvain = false
+                            this.camille = false
+                        } else if (this.valeur = "camille") {
+                            this.camille = !this.camille
+                            drawChart()
+                            drawChartressentie()
+                            drawChartstress()
+                            this.sylvain = false
+                            this.johan = false
+                        } else {
+                            this.sylvain = !this.sylvain
+                            drawChart()
+                            drawChartressentie()
+                            drawChartstress()
+                            this.camille = false
+                            this.camille = false
+                        }
+                        console.log(this.johan);
+                    };
+                })
+            </script>
+        </body>
 
-</html>
+    </html>

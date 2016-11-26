@@ -1,42 +1,126 @@
 /*login*/
 
 body {
-  display: flex;
-  min-height: 100vh;
-  flex-direction: column;
-  background: #fff;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    background: #fff;
+    font-family: 'Roboto', sans-serif;
 }
 
 main {
-  flex: 1 0 auto;
+    flex: 1 0 auto;
 }
 
-.input-field input[type=date]:focus + label,
-.input-field input[type=text]:focus + label,
-.input-field input[type=email]:focus + label,
-.input-field input[type=password]:focus + label {
-  color: #e91e63;
+p {
+  font-size:16px;
 }
 
-.input-field input[type=date]:focus,
-.input-field input[type=text]:focus,
-.input-field input[type=email]:focus,
-.input-field input[type=password]:focus {
-  border-bottom: 2px solid #e91e63;
-  box-shadow: none;
+#presentationAccueil {
+  font-size:20px;
+  text-align: center;
+  font-family: 'Roboto Slab', serif;
+  color:rgb(40, 53, 147);
+}
+
+#incidents {
+  text-align: center;
+  font-size:20px;
+}
+
+#traitement, #historique, #exercices {
+    background-color: rgb(40, 53, 147);
+    text-align: center;
+    color: white;
+    margin-left: 300px;
+    margin-right: 300px;
+    border-radius: 20px;
+    border: 2px solid black;
+}
+
+#traitement {
+    margin-top: 150px;
+}
+
+#ordonnance {
+    background-color: rgb(40, 53, 147);
+    margin-left: 250px;
+    margin-right: 200px;
+    border-radius: 20px;
+    border: 2px solid black;
+    color: white;
+    margin-top: 40px;
+}
+.choix{
+  text-align: center;
+}
+.choix a{
+  width: 50%;
+  height: 50%;
+}
+#ordonnance h1 {
+    text-align: center;
+}
+
+#ordonnance h2 {
+    font-size: 2em;
+    margin-left: 25px;
+    margin-top: 70px;
+}
+
+#ordonnance h3, h4 {
+    font-size: 1.7em;
+}
+
+#ordonnance ul li {
+    font-size: 1.5em;
+    margin-left: 30px;
+}
+
+.pair{
+    background-color: rgb(40, 53, 147);
+    width: 100%;
+    color: white;
+    margin: 0 auto;
+}
+
+.impair {
+    background-color: rgb(33, 58, 239);
+    width: 100%;
+    color: white;
+    margin: 0 auto;
+}
+
+
+.input-field input[type=date]:focus+label, .input-field input[type=text]:focus+label, .input-field input[type=email]:focus+label, .input-field input[type=password]:focus+label {
+    color: #e91e63;
+}
+
+.input-field input[type=date]:focus, .input-field input[type=text]:focus, .input-field input[type=email]:focus, .input-field input[type=password]:focus {
+    border-bottom: 2px solid #e91e63;
+    box-shadow: none;
 }
 
 .sitename {
-  width: 150%;
-  height: 150%;
+    width: 150%;
+    height: 150%;
 }
+
+#suiviBar {
+    padding: 0;
+    height: 40px;
+}
+
 
 /*fin login*/
 
-
 .chart_div div div {
-  width: 900px;
-  height: 500px;
+    width: 900px;
+    height: 500px;
+}
+
+.Inscription{
+  margin-top: 20px;
 }
 
 .pres {
