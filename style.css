@@ -13,7 +13,67 @@ main {
 }
 
 p {
+  font-size:16px;
+}
+#incidents {
+  text-align: center;
+  font-size:20px;
+}
+#traitement, #historique, #exercices {
+    background-color: rgb(40, 53, 147);
+    text-align: center;
+    color: white;
+    margin-left: 300px;
+    margin-right: 300px;
+    border-radius: 20px;
+    border: 2px solid black;
+}
 
+#traitement {
+    margin-top: 150px;
+}
+
+#ordonnance {
+    background-color: rgb(40, 53, 147);
+    margin-left: 250px;
+    margin-right: 200px;
+    border-radius: 20px;
+    border: 2px solid black;
+    color: white;
+    margin-top: 40px;
+}
+
+#ordonnance h1 {
+    text-align: center;
+}
+
+#ordonnance h2 {
+    font-size: 2em;
+    margin-left: 25px;
+    margin-top: 70px;
+}
+
+#ordonnance h3, h4 {
+    font-size: 1.7em;
+}
+
+#ordonnance ul li {
+    font-size: 1.5em;
+    margin-left: 30px;
+}
+
+.pair{
+    background-color: rgb(40, 53, 147);
+    width: 100%;
+    color: white;
+    margin: 0 auto;
+}
+
+.impair {
+    background-color: rgb(33, 58, 239);
+    width: 100%;
+    color: white;
+    margin: 0 auto;
 }
 
 
