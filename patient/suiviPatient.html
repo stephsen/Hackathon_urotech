@@ -2,7 +2,7 @@
 <html ng-app="myApp">
     <head>
         <meta charset="utf-8">
-        <title></title>
+        <title>serein'envie</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
         <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
@@ -12,7 +12,7 @@
         <div class="navbar-fixed">
             <nav>
                 <div class="nav-wrapper indigo darken-3">
-                    <a href="#"><img class="brand-logo left" width="55" src="./img/logo.png"></a>
+                    <a href="#"><img class="brand-logo left" width="55" src="../img/logo.png"></a>
                     <a href="#" data-activates="mobile-demo" class="button-collapse right">
                         <i class="material-icons">menu</i>
                     </a>
@@ -80,8 +80,12 @@
 
             <!-- Page Mon quotidien -->
             <div class="quotidien" ng-show="vm.quotidien">
+
                 <div class="row">
                     <div class="input-field col offset-s4 s4">
+                      <p>Choisissez le jour que vous voulez renseigner</p>
+                        <input type="date" placeholder="Choisissez un jour" class="datepicker">
+                        <br/>
                         <p>Quand as-tu été géné ?</p>
                         <select id="moment">
                             <option value="" disabled selected>Choisir l'heure</option>
@@ -145,14 +149,15 @@
             <div class="ressenti" ng-show="vm.ressenti">
                 <h3>Mon ressenti</h3>
                 <div class="row">
-                    <div class="input-field col offset-s4 s4">
+                    <div class="input-field col offset-s5 s2">
                         <p>Quel est ton ressenti ?</p>
                         <select id="ressenti">
                             <option value="" disabled selected>Aujourd'hui, je me sens</option>
-                            <option></option>
-                            <option></option>
-                            <option></option>
-                            <option></option>
+                            <option value="1" class="left" data-icon="../img/1.png" alt="très bien" />Très bien</option>
+                            <option value="2" class="left" data-icon="../img/2.png" alt="bien" />Bien</option>
+                            <option value="3" class="left" data-icon="../img/3.png" alt="plutôt bien" />Plutôt bien</option>
+                            <option value="4" class="left" data-icon="../img/4.png" alt="mal" />Mal</option>
+                            <option value="5" class="left" data-icon="../img/5.png" alt="très mal" />Très mal</option>
                         </select>
 
                     </div>
@@ -197,6 +202,10 @@
                                 this.stress = false;
                                 this.evolution = !this.evolution;
                             };
+                            $('.datepicker').pickadate({
+                                selectMonths: true, // Creates a dropdown to control month
+                                selectYears: 1 // Creates a dropdown of 15 years to control year
+                            });
                             $(document).ready(function() {
                                 $('select').material_select();
                             });
