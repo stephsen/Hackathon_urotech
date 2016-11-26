@@ -16,4 +16,7 @@ function mainController($localStorage, storageFactory, $rootScope) {
     this.update = (i, data) => {
         this.storageFactory.datas[i] = data;
     };
+
+
+
 }
