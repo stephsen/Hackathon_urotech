@@ -234,62 +234,33 @@
                 google.load('visualization', '1', {packages: ['corechart']});
                 google.setOnLoadCallback(drawChartstress);
 
-                function drawChartstress() {
-                    var datastress = google.visualization.arrayToDataTable([
-                        [
-                            'Date', 'nbr'
-                        ],
-                        [
-                            '01/11/2016', 4
-                        ],
-                        [
-                            '03/11/2016', 5
-                        ],
-                        [
-                            '04/11/2016', 4
-                        ],
-                        [
-                            '06/11/2016', 4
-                        ],
-                        [
-                            '08/11/2016', 3
-                        ],
-                        [
-                            '10/11/2016', 3
-                        ],
-                        [
-                            '11/11/2016', 3
-                        ],
-                        [
-                            '12/11/2016', 3
-                        ],
-                        [
-                            '15/11/2016', 2
-                        ],
-                        [
-                            '16/11/2016', 4
-                        ],
-                        [
-                            '17/11/2016', 4
-                        ],
-                        [
-                            '19/11/2016', 2
-                        ],
-                        [
-                            '20/11/2016', 4
-                        ],
-                        [
-                            '22/11/2016', 3
-                        ],
-                        [
-                            '24/11/2016', 2
-                        ],
-                        ['26/11/2016', 3]
-                    ]);
-                    var optionstress = {
-                        title: 'Mon stress'
-                    };
-                    var chartstress = new google.visualization.LineChart(document.getElementById('chart_divstress'));
+        function drawChartstress() {
+          var datastress = google.visualization.arrayToDataTable([
+            ['Date', 'nbr'],
+            ['01/11/2016',  4],
+            ['03/11/2016',  5], 
+            ['04/11/2016',  4],
+            ['06/11/2016',  4],
+            ['08/11/2016',  3],
+            ['10/11/2016',  3],
+            ['11/11/2016',  3],
+            ['12/11/2016',  3],
+            ['15/11/2016',  2],
+            ['16/11/2016',  4],
+            ['17/11/2016',  4],
+            ['19/11/2016',  2],
+            ['20/11/2016',  4],
+            ['22/11/2016',  3],
+            ['24/11/2016',  2],
+            ['26/11/2016',  3]
+          ]);
+          var optionstress = {
+            vAxis: {scaleType: 'date'},
+            hAxis: {scaleType: 'number'},
+            title: 'Mon stress',
+            scaleType: 'number'
+          };
+          var chartstress = new google.visualization.LineChart(document.getElementById('chart_divstress'));
 
                     chartstress.draw(datastress, optionstress);
                 }

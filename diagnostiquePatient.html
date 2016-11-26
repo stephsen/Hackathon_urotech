@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html >
+    <head>
+        <meta charset="UTF-8">
+        <title>serein'envie</title>
+        <head>
+            <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+            <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
+            <link rel="stylesheet" href="./style.css" media="screen" title="no title">
+        </head>
+
+        <body>
+            <div class="navbar-fixed">
+                <nav>
+                    <div class="nav-wrapper indigo darken-3">
+                        <a href="#"><img class="brand-logo left" width="55" src="./img/logo.png"></a>
+                        <a href="#" data-activates="mobile-demo" class="button-collapse right">
+                            <i class="material-icons">menu</i>
+                        </a>
+                        <ul class="right hide-on-med-and-down">
+                            <li>
+                                <a href="accueilPatients.html">Accueil</a>
+                            </li>
+                            <li>
+                                <a href="diagnosticPatients.html">Diagnostic</a>
+                            </li>
+                            <li>
+                                <a href="traitementPatients.html">Traitement</a>
+                            </li>
+                            <li>
+                                <a href="suiviPatients.html">Suivi</a>
+                            </li>
+                        </ul>
+                        <ul class="side-nav" id="mobile-demo">
+                            <li>
+                                <a href="accueilPatients.html">Accueil</a>
+                            </li>
+                            <li>
+                                <a href="diagnosticPatients.html">Diagnostic</a>
+                            </li>
+                            <li>
+                                <a href="traitementPatients.html">Traitement</a>
+                            </li>
+                            <li>
+                                <a href="suiviPatients.html">Suivi</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+
+            <main>
+                <div class="section"></div>
+                <div class="center-align pres">
+                    <img src="img/logo.png" width="200" alt="" class="circle responsive-img left logoPage">
+                    <h3 class="titrepres">
+                        Pour faciliter votre diagnotic , merci de cocher les réponses qui vous correspondent ci-dessous:
+                    </h3>
+                </div>
+                <div class="section"></div>
+                <div class="row">
+                    <div class="col offset-s4 s4 center-align">
+                      <h5>Choississez le jour que vous voulez renseigner</h5>
+                        <input type="date" class="datepicker">
+                    </div>
+                </div>
+                <div class="center-align">
+                    <h4>
+                        Que ressentez-vous?
+                    </h4>
+                    <br>
+                </div>
+                <div class="row">
+                    <div class="col offset-s5 s6">
+                        <input type="checkbox" id="test1"/>
+                        <label for="test1">Gène urinaire, spasmes.</label>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col offset-s5 s6">
+                        <input type="checkbox" id="test2"/>
+                        <label for="test2">Peur de fuites urinaires.</label>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col offset-s5 s6">
+                        <input type="checkbox" id="test3"/>
+                        <label for="test3">Sensation de véssie pleine, lourdeur.</label>
+                    </div>
+                </div>
+
+                <div class="center-align">
+                    <h4>
+                        Où situez-vous votre gène?
+                    </h4>
+                    <br>
+                </div>
+                <div class="row">
+                    <div class="col offset-s5 s6">
+                        <input type="checkbox" id="test4"/>
+                        <label for="test4">En bas du ventre</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col offset-s5 s6">
+                        <input type="checkbox" id="test5"/>
+                        <label for="test5">A la sortie de l'orifice urinaire</label>
+                    </div>
+                </div>
+                <div class="center-align">
+                    <br>
+                    <br>
+                    <h3>
+                        Pour mieux identifier votre trouble, remplissez le tableau suivant. N'hésitez pas à contacter votre médecin pour vous aider:
+                    </h3>
+
+                    <table class="bordered centered">
+                        <thead>
+                            <tr>
+                                <th data-field="Heures"></th>
+                                <th data-field="Boissons" colspan=2>Boissons</th>
+                                <th data-field="Mictions" colspan=4>Mictions</th>
+                                <th data-field="Fuites accidentelles" colspan=3></th>
+                                <th data-field="Avez-vous ressenti le besoin urgent d'uriner" colspan=2></th>
+                                <th data-field="Que faissiez vous à ce moment là?"></th>
+                            </tr>
+                            <tr>
+                                <th>Heure</th>
+                                <th>Type</th>
+                                <th>Quantité</th>
+                                <th>Fréquences</th>
+                                <th colspan=3>Quantité</th>
+                                <th colspan=3>Fuites accidentelles</th>
+                                <th colspan=2>Avez-vous ressenti le besoin urgent d'uriner</th>
+                                <th>Que faissiez vous à ce moment là?</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>19h-20h</td>
+                                <td>
+                                    <a href="#"></a>
+                                </td>
+                                <td>
+                                    <a href="#"></a>
+                                </td>
+                                <td>
+                                    <a href="#"></a>
+                                </td>
+                                <td><img src="./img/drop.png" alt="" class="responsive-img"/></td>
+                                <td><img src="./img/water.png" alt="" class="responsive-img"/></td>
+                                <td><img src="./img/printing.png" alt="" class="responsive-img"/></td>
+                                <td><img src="./img/drop.png" alt="" class="responsive-img"/></td>
+                                <td><img src="./img/water.png" alt="" class="responsive-img"/></td>
+                                <td><img src="./img/printing.png" alt="" class="responsive-img"/></td>
+                                <td>
+                                    <a href="#"></a>Oui</td>
+                                <td>
+                                    <a href="#"></a>Non</td>
+                                <td>
+                                    <a href="#"></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>21h-23h</td>
+                                <td>
+                                    <a href="#"></a>
+                                </td>
+                                <td>
+                                    <a href="#"></a>
+                                </td>
+                                <td>
+                                    <a href="#"></a>
+                                </td>
+                                <td><img src="./img/drop.png" alt="" class="responsive-img"/></td>
+                                <td><img src="./img/water.png" alt="" class="responsive-img"/></td>
+                                <td><img src="./img/printing.png" alt="" class="responsive-img"/></td>
+                                <td><img src="./img/drop.png" alt="" class="responsive-img"/></td>
+                                <td><img src="./img/water.png" alt="" class="responsive-img"/></td>
+                                <td><img src="./img/printing.png" alt="" class="responsive-img"/></td>
+                                <td>
+                                    <a href="#"></a>Oui</td>
+                                <td>
+                                    <a href="#"></a>Non</td>
+                                <td>
+                                    <a href="#"></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>23h-1h</td>
+                                <td>
+                                    <a href="#"></a>
+                                </td>
+                                <td>
+                                    <a href="#"></a>
+                                </td>
+                                <td>
+                                    <a href="#"></a>
+                                </td>
+                                <td><img src="./img/drop.png" alt="" class="responsive-img"/></td>
+                                <td><img src="./img/water.png" alt="" class="responsive-img"/></td>
+                                <td><img src="./img/printing.png" alt="" class="responsive-img"/></td>
+                                <td><img src="./img/drop.png" alt="" class="responsive-img"/></td>
+                                <td><img src="./img/water.png" alt="" class="responsive-img"/></td>
+                                <td><img src="./img/printing.png" alt="" class="responsive-img"/></td>
+                                <td>
+                                    <a href="#"></a>Oui</td>
+                                <td>
+                                    <a href="#"></a>Non</td>
+                                <td>
+                                    <a href="#"></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>1h-3h</td>
+                                <td>
+                                    <a href="#"></a>
+                                </td>
+                                <td>
+                                    <a href="#"></a>
+                                </td>
+                                <td>
+                                    <a href="#"></a>
+                                </td>
+                                <td><img src="./img/drop.png" alt="" class="responsive-img"/></td>
+                                <td><img src="./img/water.png" alt="" class="responsive-img"/></td>
+                                <td><img src="./img/printing.png" alt="" class="responsive-img"/></td>
+                                <td><img src="./img/drop.png" alt="" class="responsive-img"/></td>
+                                <td><img src="./img/water.png" alt="" class="responsive-img"/></td>
+                                <td><img src="./img/printing.png" alt="" class="responsive-img"/></td>
+                                <td>
+                                    <a href="#"></a>Oui</td>
+                                <td>
+                                    <a href="#"></a>Non</td>
+                                <td>
+                                    <a href="#"></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>3h-5h</td>
+                                <td>
+                                    <a href="#"></a>
+                                </td>
+                                <td>
+                                    <a href="#"></a>
+                                </td>
+                                <td>
+                                    <a href="#"></a>
+                                </td>
+                                <td><img src="./img/drop.png" alt="" class="responsive-img"/></td>
+                                <td><img src="./img/water.png" alt="" class="responsive-img"/></td>
+                                <td><img src="./img/printing.png" alt="" class="responsive-img"/></td>
+                                <td><img src="./img/drop.png" alt="" class="responsive-img"/></td>
+                                <td><img src="./img/water.png" alt="" class="responsive-img"/></td>
+                                <td><img src="./img/printing.png" alt="" class="responsive-img"/></td>
+                                <td>
+                                    <a href="#"></a>Oui</td>
+                                <td>
+                                    <a href="#"></a>Non</td>
+                                <td>
+                                    <a href="#"></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>5h-7h</td>
+                                <td>
+                                    <a href="#"></a>
+                                </td>
+                                <td>
+                                    <a href="#"></a>
+                                </td>
+                                <td>
+                                    <a href="#"></a>
+                                </td>
+                                <td><img src="./img/drop.png" alt="" class="responsive-img"/></td>
+                                <td><img src="./img/water.png" alt="" class="responsive-img"/></td>
+                                <td><img src="./img/printing.png" alt="" class="responsive-img"/></td>
+                                <td><img src="./img/drop.png" alt="" class="responsive-img"/></td>
+                                <td><img src="./img/water.png" alt="" class="responsive-img"/></td>
+                                <td><img src="./img/printing.png" alt="" class="responsive-img"/></td>
+                                <td>
+                                    <a href="#"></a>Oui</td>
+                                <td>
+                                    <a href="#"></a>Non</td>
+                                <td>
+                                    <a href="#"></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>7h-9h</td>
+                                <td>
+                                    <a href="#"></a>
+                                </td>
+                                <td>
+                                    <a href="#"></a>
+                                </td>
+                                <td>
+                                    <a href="#"></a>
+                                </td>
+                                <td><img src="./img/drop.png" alt="" class="responsive-img"/></td>
+                                <td><img src="./img/water.png" alt="" class="responsive-img"/></td>
+                                <td><img src="./img/printing.png" alt="" class="responsive-img"/></td>
+                                <td><img src="./img/drop.png" alt="" class="responsive-img"/></td>
+                                <td><img src="./img/water.png" alt="" class="responsive-img"/></td>
+                                <td><img src="./img/printing.png" alt="" class="responsive-img"/></td>
+                                <td>
+                                    <a href="#"></a>Oui</td>
+                                <td>
+                                    <a href="#"></a>Non</td>
+                                <td>
+                                    <a href="#"></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>9h-12h</td>
+                                <td>
+                                    <a href="#"></a>
+                                </td>
+                                <td>
+                                    <a href="#"></a>
+                                </td>
+                                <td>
+                                    <a href="#"></a>
+                                </td>
+                                <td><img src="./img/drop.png" alt="" class="responsive-img"/></td>
+                                <td><img src="./img/water.png" alt="" class="responsive-img"/></td>
+                                <td><img src="./img/printing.png" alt="" class="responsive-img"/></td>
+                                <td><img src="./img/drop.png" alt="" class="responsive-img"/></td>
+                                <td><img src="./img/water.png" alt="" class="responsive-img"/></td>
+                                <td><img src="./img/printing.png" alt="" class="responsive-img"/></td>
+                                <td>
+                                    <a href="#"></a>Oui</td>
+                                <td>
+                                    <a href="#"></a>Non</td>
+                                <td>
+                                    <a href="#"></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>12h-14h</td>
+                                <td>
+                                    <a href="#"></a>
+                                </td>
+                                <td>
+                                    <a href="#"></a>
+                                </td>
+                                <td>
+                                    <a href="#"></a>
+                                </td>
+                                <td><img src="./img/drop.png" alt="" class="responsive-img"/></td>
+                                <td><img src="./img/water.png" alt="" class="responsive-img"/></td>
+                                <td><img src="./img/printing.png" alt="" class="responsive-img"/></td>
+                                <td><img src="./img/drop.png" alt="" class="responsive-img"/></td>
+                                <td><img src="./img/water.png" alt="" class="responsive-img"/></td>
+                                <td><img src="./img/printing.png" alt="" class="responsive-img"/></td>
+                                <td>
+                                    <a href="#"></a>Oui</td>
+                                <td>
+                                    <a href="#"></a>Non</td>
+                                <td>
+                                    <a href="#"></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>14h-16h</td>
+                                <td>
+                                    <a href="#"></a>
+                                </td>
+                                <td>
+                                    <a href="#"></a>
+                                </td>
+                                <td>
+                                    <a href="#"></a>
+                                </td>
+                                <td><img src="./img/drop.png" alt="" class="responsive-img"/></td>
+                                <td><img src="./img/water.png" alt="" class="responsive-img"/></td>
+                                <td><img src="./img/printing.png" alt="" class="responsive-img"/></td>
+                                <td><img src="./img/drop.png" alt="" class="responsive-img"/></td>
+                                <td><img src="./img/water.png" alt="" class="responsive-img"/></td>
+                                <td><img src="./img/printing.png" alt="" class="responsive-img"/></td>
+                                <td>
+                                    <a href="#"></a>Oui</td>
+                                <td>
+                                    <a href="#"></a>Non</td>
+                                <td>
+                                    <a href="#"></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>16h-18h</td>
+                                <td>
+                                    <a href="#"></a>
+                                </td>
+                                <td>
+                                    <a href="#"></a>
+                                </td>
+                                <td>
+                                    <a href="#"></a>
+                                </td>
+                                <td><img src="./img/drop.png" alt="" class="responsive-img"/></td>
+                                <td><img src="./img/water.png" alt="" class="responsive-img"/></td>
+                                <td><img src="./img/printing.png" alt="" class="responsive-img"/></td>
+                                <td><img src="./img/drop.png" alt="" class="responsive-img"/></td>
+                                <td><img src="./img/water.png" alt="" class="responsive-img"/></td>
+                                <td><img src="./img/printing.png" alt="" class="responsive-img"/></td>
+                                <td>
+                                    <a href="#"></a>Oui</td>
+                                <td>
+                                    <a href="#"></a>Non</td>
+                                <td>
+                                    <a href="#"></a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="section"></div>
+                    <center>
+                        <div class="row">
+                            <div class="col offset-s5 s6">
+                                <button type='submit' name='btn_login' class='col  btn btn-large waves-effect indigo'>Valider</button>
+                            </div>
+                        </div>
+                    </center>
+                    <div class="section"></div>
+
+                    <footer class="page-footer indigo darken-3">
+                        <div class="footer-copyright">
+                            <div class="container">
+                                © 2014 Copyright Text
+                                <a class="grey-text text-lighten-4 right" href="#!">Mentions Légals</a>
+                            </div>
+                        </div>
+                    </footer>
+                    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+                    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
+                    <script>
+                    $('.datepicker').pickadate({
+                      selectMonths: true, // Creates a dropdown to control month
+                      selectYears: 15 // Creates a dropdown of 15 years to control year
+                      });
+                    </script>
+                </main>
+            </body>
+
+        </html>
