@@ -65,6 +65,9 @@ font-family: 'Roboto Slab', serif;
 #ordonnance h1 {
     text-align: center;
 }
+.titrepres {
+  text-align: center;
+}
 
 #ordonnance h2 {
     font-size: 2em;
